@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenido a Stardew Valley Like Game</title>
+    <link rel="stylesheet" href="landing.css">
+    <link rel="icon" href="assets/favicon.ico">
+</head>
+<body>
+    <header>
+        <h1>Bienvenido a [Nombre del Juego]</h1>
+        <p>Un juego de simulación de vida en el campo, donde puedes cultivar, criar animales y explorar.</p>
+        <a href="#features" class="cta-button">Descubre Más</a>
+    </header>
+
+    <section id="features">
+        <h2>Características del Juego</h2>
+        <div class="feature">
+            <h3>Cultiva y Cosecha</h3>
+            <p>Planta y cosecha una variedad de cultivos para hacer crecer tu granja.</p>
+        </div>
+        <div class="feature">
+            <h3>Cría Animales</h3>
+            <p>Crea y cuida de tus animales para obtener productos frescos.</p>
+        </div>
+        <div class="feature">
+            <h3>Explora el Mundo</h3>
+            <p>Descubre nuevos lugares, conoce a los habitantes y participa en eventos.</p>
+        </div>
+    </section>
+
+    <section id="gallery">
+        <h2>Galería</h2>
+        <div class="gallery-images">
+            <img src="assets/screenshot1.jpg" alt="Captura de pantalla 1">
+            <img src="assets/screenshot2.jpg" alt="Captura de pantalla 2">
+            <img src="assets/screenshot3.jpg" alt="Captura de pantalla 3">
+        </div>
+    </section>
+
+    <footer>
+        <p>Síguenos en nuestras redes sociales:</p>
+        <div class="social-links">
+            <a href="https://twitter.com/tu_juego" target="_blank">Twitter</a>
+            <a href="https://facebook.com/tu_juego" target="_blank">Facebook</a>
+            <a href="https://instagram.com/tu_juego" target="_blank">Instagram</a>
+        </div>
+        <p>&copy; 2023 [Nombre del Juego]. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

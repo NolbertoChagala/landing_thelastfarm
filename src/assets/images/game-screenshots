@@ -1,0 +1,73 @@
+<template>
+  <div class="landing-page">
+    <header class="landing-header">
+      <h1>Bienvenido a Farm Adventure</h1>
+      <p>¡Cultiva, explora y construye tu propia granja!</p>
+      <router-link to="/about" class="cta-button">Descubre más</router-link>
+    </header>
+    
+    <section class="features">
+      <h2>Características del juego</h2>
+      <div class="feature-item">
+        <h3>Cultiva tu granja</h3>
+        <p>Planta y cosecha una variedad de cultivos para hacer crecer tu granja.</p>
+      </div>
+      <div class="feature-item">
+        <h3>Explora el mundo</h3>
+        <p>Descubre nuevos lugares, conoce a los habitantes y encuentra tesoros ocultos.</p>
+      </div>
+      <div class="feature-item">
+        <h3>Construye y personaliza</h3>
+        <p>Construye tu hogar y personaliza tu granja a tu gusto.</p>
+      </div>
+    </section>
+
+    <footer class="landing-footer">
+      <p>&copy; 2023 Farm Adventure. Todos los derechos reservados.</p>
+    </footer>
+  </div>
+</template>
+
+<script setup lang="ts">
+// Aquí puedes agregar lógica adicional si es necesario
+</script>
+
+<style scoped>
+.landing-page {
+  text-align: center;
+  padding: 2rem;
+  background-color: #f0f8ff;
+}
+
+.landing-header {
+  margin-bottom: 2rem;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background-color: #41b883;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+  background-color: #36a76a;
+}
+
+.features {
+  margin: 2rem 0;
+}
+
+.feature-item {
+  margin: 1rem 0;
+}
+
+.landing-footer {
+  margin-top: 2rem;
+  font-size: 0.8rem;
+  color: #555;
+}
+</style>

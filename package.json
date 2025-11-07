@@ -1,0 +1,39 @@
+{
+  "name": "farm-game",
+  "version": "1.0.0",
+  "description": "Un juego de granja tipo Stardew Valley",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc && vite build",
+    "preview": "vite preview",
+    "type-check": "vue-tsc --noEmit",
+    "format": "prettier --write src/"
+  },
+  "dependencies": {
+    "vue": "^3.4.0",
+    "vue-router": "^4.2.5",
+    "pinia": "^2.1.7",
+    "@vueuse/core": "^10.5.0",
+    "@heroicons/vue": "^2.0.18"
+  },
+  "devDependencies": {
+    "@types/node": "^20.8.0",
+    "@vitejs/plugin-vue": "^4.6.2",
+    "typescript": "^5.2.2",
+    "vite": "^5.0.0",
+    "vue-tsc": "^1.8.22",
+    "tailwindcss": "^3.3.6",
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.32"
+  },
+  "keywords": [
+    "vue",
+    "typescript",
+    "vite",
+    "farm-game",
+    "stardew-valley"
+  ],
+  "author": "Tu Nombre",
+  "license": "MIT"
+}
