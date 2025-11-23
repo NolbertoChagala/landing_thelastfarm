@@ -14,7 +14,7 @@ export default defineConfig({
       workbox: {
         skipWaiting: true,
         clientsClaim: true,
-
+        navigateFallback: 'index.html',
         globPatterns: ['**/*.{js,css,html,png,svg,ico,webmanifest}'],
         cleanupOutdatedCaches: true,
         maximumFileSizeToCacheInBytes: 5 * 1024 * 1024,
