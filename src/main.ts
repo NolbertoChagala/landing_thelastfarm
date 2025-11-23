@@ -6,7 +6,17 @@ import App from './App.vue'
 import LandingView from './views/LandingView.vue'
 import './style.css'
 
-// Crear el router
+import { registerSW } from 'virtual:pwa-register' 
+
+// Registrar Service Worker
+registerSW({
+  immediate: true,
+  onOfflineReady() {
+    console.log("PWA lista para usarse offline");
+  }
+});
+
+// Crear router
 const router = createRouter({
   history: createWebHistory(),
   routes: [
@@ -18,12 +28,13 @@ const router = createRouter({
   ]
 })
 
-// Crear la aplicación
+// Crear aplicación
 const app = createApp(App)
+
 
 // Usar plugins
 app.use(createPinia())
 app.use(router)
 
-// Montar la aplicación
+// Montar
 app.mount('#app')

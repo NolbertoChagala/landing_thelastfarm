@@ -7,6 +7,7 @@ export default defineConfig({
   plugins: [
     vue(),
     VitePWA({
+      filename: 'sw.js',
       registerType: 'autoUpdate',
       includeAssets: [
         'icons/icon-192x192.png',
