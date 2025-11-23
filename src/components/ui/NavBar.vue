@@ -1,74 +1,87 @@
-<!-- filepath: /Users/blxckbxll/Desktop/farm/farm_game/src/views/LandingPage.vue -->
 <template>
-  <div class="landing-page">
-    <header class="landing-header">
-      <h1>Bienvenido a Farm Adventure</h1>
-      <p>¡Cultiva, explora y construye tu propia granja!</p>
-      <router-link to="/about" class="cta-button">Descubre más</router-link>
-    </header>
+  <nav class="fixed top-0 w-full bg-white/90 backdrop-blur-md z-50 shadow-sm">
+    <div class="container-custom px-6 sm:px-0 mx-auto">
+      <div class="flex justify-between items-center py-4">
+        <div class="flex items-center space-x-2">
+          <div
+            class="w-8 h-8 bg-farm-white-200 rounded-lg flex items-center justify-center overflow-hidden"
+          >
+            <img
+              src="/The_Last_Farm.webp"
+              alt=""
+              class="w-full h-full object-cover"
+            />
+          </div>
+          <h2 class="text-xl sm:text-2xl font-bold text-farm-green-800">
+            The Las Farm
+          </h2>
+        </div>
 
-    <section class="features">
-      <h2>Características del juego</h2>
-      <div class="feature">
-        <h3>Cultiva tu granja</h3>
-        <p>Planta y cosecha una variedad de cultivos para hacer crecer tu granja.</p>
-      </div>
-      <div class="feature">
-        <h3>Explora el mundo</h3>
-        <p>Descubre nuevos lugares, encuentra tesoros y conoce a los habitantes del pueblo.</p>
-      </div>
-      <div class="feature">
-        <h3>Construye y personaliza</h3>
-        <p>Construye tu hogar y personaliza tu granja a tu gusto.</p>
-      </div>
-    </section>
+        <ul class="hidden md:flex space-x-8">
+          <li v-for="link in links" :key="link.href">
+            <a
+              :href="link.href"
+              class="text-farm-brown-700 hover:text-farm-green-600 transition-colors flex items-center space-x-1"
+            >
+              <component :is="link.icon" class="w-4 h-4" />
+              <span>{{ link.text }}</span>
+            </a>
+          </li>
+        </ul>
 
-    <footer class="landing-footer">
-      <p>&copy; 2023 Farm Adventure. Todos los derechos reservados.</p>
-    </footer>
-  </div>
+        <button
+          @click="toggleMenu"
+          class="md:hidden text-farm-brown-700 focus:outline-none"
+        >
+          <component :is="isMenuOpen ? XMarkIcon : Bars3Icon" class="w-6 h-6" />
+        </button>
+      </div>
+    </div>
+
+    <div
+      v-show="isMenuOpen"
+      class="md:hidden absolute top-full left-0 w-full bg-white border-t border-gray-100 shadow-lg"
+    >
+      <ul class="flex flex-col py-4 px-6 space-y-4">
+        <li v-for="link in links" :key="link.href">
+          <a
+            :href="link.href"
+            @click="isMenuOpen = false"
+            class="text-farm-brown-700 hover:text-farm-green-600 transition-colors flex items-center space-x-3 py-2"
+          >
+            <component :is="link.icon" class="w-5 h-5" />
+            <span class="text-lg">{{ link.text }}</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
 </template>
 
 <script setup lang="ts">
-// Aquí puedes agregar lógica adicional si es necesario
+import { ref } from "vue";
+import {
+  HomeIcon,
+  SparklesIcon,
+  PlayIcon,
+  PhotoIcon,
+  ArrowDownTrayIcon,
+  Bars3Icon,
+  XMarkIcon, // Importé XMarkIcon para cuando el menú está abierto
+} from "@heroicons/vue/24/outline";
+
+// Estado para controlar si el menú móvil está abierto
+const isMenuOpen = ref(false);
+
+const toggleMenu = () => {
+  isMenuOpen.value = !isMenuOpen.value;
+};
+
+const links = [
+  { href: "#home", text: "Inicio", icon: HomeIcon },
+  { href: "#features", text: "Características", icon: SparklesIcon },
+  { href: "#gameplay", text: "Gameplay", icon: PlayIcon },
+  { href: "#gallery", text: "Galería", icon: PhotoIcon },
+  { href: "#download", text: "Descargar", icon: ArrowDownTrayIcon },
+];
 </script>
-
-<style scoped>
-.landing-page {
-  text-align: center;
-  padding: 2rem;
-  background-color: var(--color-background);
-  color: var(--color-text);
-}
-
-.landing-header {
-  margin-bottom: 2rem;
-}
-
-.cta-button {
-  display: inline-block;
-  padding: 1rem 2rem;
-  background-color: hsla(160, 100%, 37%, 1);
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-  transition: background-color 0.3s;
-}
-
-.cta-button:hover {
-  background-color: hsla(160, 100%, 37%, 0.8);
-}
-
-.features {
-  margin: 2rem 0;
-}
-
-.feature {
-  margin: 1rem 0;
-}
-
-.landing-footer {
-  margin-top: 2rem;
-  font-size: 0.8rem;
-}
-</style>

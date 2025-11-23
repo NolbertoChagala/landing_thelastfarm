@@ -1,71 +1,142 @@
-<!-- filepath: /Users/blxckbxll/Desktop/farm/farm_game/src/views/LandingPage.vue -->
 <template>
-  <div class="landing-page">
-    <header class="hero">
-      <h1>Bienvenido a Stardew Valley: Aventura en el Campo</h1>
-      <p>¡Cultiva, explora y construye tu propia granja!</p>
-      <router-link to="/about" class="cta-button">Descubre Más</router-link>
-    </header>
+  <section id="download" class="section-padding bg-farm-brown-800 text-white">
+    <div class="container-custom text-center px-6 sm:px-0">
+      <h2 class="text-3xl sm:text-4xl font-bold mb-6">
+        ¡Comienza tu Aventura en The Last Farm!
+      </h2>
+      <p class="text-lg sm:text-xl mb-12 text-farm-brown-200">
+        Descarga el juego y vive la experiencia agrícola más relajante y
+        encantadora
+      </p>
 
-    <section class="features">
-      <h2>Características del Juego</h2>
-      <div class="feature">
-        <h3>Cultiva tu Granja</h3>
-        <p>Planta y cosecha una variedad de cultivos, cría animales y mejora tu granja.</p>
-      </div>
-      <div class="feature">
-        <h3>Explora el Mundo</h3>
-        <p>Descubre cuevas, minas y secretos ocultos en un mundo vibrante y lleno de vida.</p>
-      </div>
-      <div class="feature">
-        <h3>Construye Relaciones</h3>
-        <p>Haz amigos, participa en festivales y construye relaciones significativas con los habitantes del pueblo.</p>
-      </div>
-    </section>
+      <div class="grid md:grid-cols-3 gap-8 mb-12">
+        <div class="bg-farm-brown-700 rounded-xl p-6">
+          <h3 class="text-2xl font-semibold mb-4">Gratis</h3>
+          <div class="text-4xl font-bold mb-4">$0 MXN</div>
+          <ul class="space-y-2 mb-6">
+            <li class="flex items-center justify-center space-x-2">
+              <CheckCircleIcon
+                class="w-4 h-4 text-farm-green-400 flex-shrink-0"
+              />
+              <span>Acceso completo al juego base</span>
+            </li>
+            <li class="flex items-center justify-center space-x-2">
+              <CheckCircleIcon
+                class="w-4 h-4 text-farm-green-400 flex-shrink-0"
+              />
+              <span>Actualizaciones regulares</span>
+            </li>
+            <li class="flex items-center justify-center space-x-2">
+              <CheckCircleIcon
+                class="w-4 h-4 text-farm-green-400 flex-shrink-0"
+              />
+              <span>Comunidad activa</span>
+            </li>
+          </ul>
+          <button class="w-full btn-farm-primary">Descargar Ahora</button>
+        </div>
 
-    <footer>
-      <p>&copy; 2023 Stardew Valley. Todos los derechos reservados.</p>
-    </footer>
-  </div>
+        <div
+          class="bg-farm-green-600 rounded-xl p-6 transform scale-100 md:scale-105 shadow-xl md:shadow-none z-10"
+        >
+          <div
+            class="bg-farm-yellow-400 text-farm-brown-800 px-3 py-1 rounded-full text-sm font-semibold mb-4 flex items-center justify-center space-x-1 w-max mx-auto"
+          >
+            <StarIcon class="w-4 h-4" />
+            <span>Más Popular</span>
+          </div>
+          <h3 class="text-2xl font-semibold mb-4">Premium</h3>
+          <div class="text-4xl font-bold mb-4">$99 MXN</div>
+          <ul class="space-y-2 mb-6">
+            <li class="flex items-center justify-center space-x-2">
+              <CheckCircleIcon class="w-4 h-4 text-white flex-shrink-0" />
+              <span>Todo lo incluido en la versión Gratis</span>
+            </li>
+            <li class="flex items-center justify-center space-x-2">
+              <CheckCircleIcon class="w-4 h-4 text-white flex-shrink-0" />
+              <span>Contenido exclusivo</span>
+            </li>
+            <li class="flex items-center justify-center space-x-2">
+              <CheckCircleIcon class="w-4 h-4 text-white flex-shrink-0" />
+              <span>Experiencia sin anuncios</span>
+            </li>
+            <li class="flex items-center justify-center space-x-2">
+              <CheckCircleIcon class="w-4 h-4 text-white flex-shrink-0" />
+              <span>Membresía Premium con beneficios</span>
+            </li>
+          </ul>
+          <button
+            class="w-full bg-white text-farm-green-600 px-8 py-3 rounded-full font-semibold hover:bg-farm-green-50 transition-colors"
+          >
+            Obtener Premium
+          </button>
+        </div>
+
+        <div class="bg-farm-brown-700 rounded-xl p-6">
+          <h3 class="text-2xl font-semibold mb-4">Supporter</h3>
+          <div class="text-4xl font-bold mb-4">$199 MXN</div>
+          <ul class="space-y-2 mb-6">
+            <li class="flex items-center justify-center space-x-2">
+              <CheckCircleIcon
+                class="w-4 h-4 text-farm-green-400 flex-shrink-0"
+              />
+              <span>Todo lo incluido en Premium</span>
+            </li>
+            <li class="flex items-center justify-center space-x-2">
+              <CheckCircleIcon
+                class="w-4 h-4 text-farm-green-400 flex-shrink-0"
+              />
+              <span>Acceso anticipado a actualizaciones</span>
+            </li>
+            <li class="flex items-center justify-center space-x-2">
+              <CheckCircleIcon
+                class="w-4 h-4 text-farm-green-400 flex-shrink-0"
+              />
+              <span>Cosméticos exclusivos</span>
+            </li>
+            <li class="flex items-center justify-center space-x-2">
+              <CheckCircleIcon
+                class="w-4 h-4 text-farm-green-400 flex-shrink-0"
+              />
+              <span>Créditos extra dentro del juego</span>
+            </li>
+          </ul>
+          <button class="w-full btn-farm-secondary">Apoyar Desarrollo</button>
+        </div>
+      </div>
+
+      <div
+        class="flex flex-col md:flex-row justify-center items-center gap-4 md:gap-8"
+      >
+        <button
+          class="bg-gray-800 hover:bg-gray-700 px-6 py-3 rounded-lg transition-colors flex items-center justify-center space-x-2 w-full md:w-auto"
+        >
+          <DevicePhoneMobileIcon class="w-5 h-5" />
+          <span>App Store</span>
+        </button>
+        <button
+          class="bg-gray-800 hover:bg-gray-700 px-6 py-3 rounded-lg transition-colors flex items-center justify-center space-x-2 w-full md:w-auto"
+        >
+          <DevicePhoneMobileIcon class="w-5 h-5" />
+          <span>Google Play</span>
+        </button>
+        <button
+          class="bg-gray-800 hover:bg-gray-700 px-6 py-3 rounded-lg transition-colors flex items-center justify-center space-x-2 w-full md:w-auto"
+        >
+          <ComputerDesktopIcon class="w-5 h-5" />
+          <span>Windows</span>
+        </button>
+      </div>
+    </div>
+  </section>
 </template>
 
 <script setup lang="ts">
-// Aquí puedes agregar lógica adicional si es necesario
+import {
+  CheckCircleIcon,
+  StarIcon,
+  DevicePhoneMobileIcon,
+  ComputerDesktopIcon,
+  ArrowDownTrayIcon,
+} from "@heroicons/vue/24/outline";
 </script>
-
-<style scoped>
-.landing-page {
-  font-family: 'Arial', sans-serif;
-  color: #333;
-}
-
-.hero {
-  background: url('@/assets/hero-background.jpg') no-repeat center center/cover;
-  padding: 50px;
-  text-align: center;
-  color: white;
-}
-
-.cta-button {
-  background-color: #41b883;
-  color: white;
-  padding: 10px 20px;
-  text-decoration: none;
-  border-radius: 5px;
-}
-
-.features {
-  padding: 20px;
-  text-align: center;
-}
-
-.feature {
-  margin: 20px 0;
-}
-
-footer {
-  text-align: center;
-  padding: 20px;
-  background-color: #f8f8f8;
-}
-</style>

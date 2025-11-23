@@ -1,7 +1,7 @@
 <template>
   <div class="landing-page">
     <header class="landing-header">
-      <h1>Bienvenido a Farm Adventure</h1>
+      <h1>Bienvenido a The last Farm</h1>
       <p>¡Cultiva, explora y construye tu propia granja!</p>
       <router-link to="/about" class="cta-button">Descubre más</router-link>
     </header>
