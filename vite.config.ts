@@ -9,12 +9,52 @@ export default defineConfig({
     VitePWA({
       filename: 'sw.js',
       registerType: 'autoUpdate',
+
+      // ACTIVA actualización inmediata del SW
+      workbox: {
+        skipWaiting: true,
+        clientsClaim: true,
+
+        globPatterns: ['**/*.{js,css,html,png,svg,ico,webmanifest}'],
+        cleanupOutdatedCaches: true,
+        maximumFileSizeToCacheInBytes: 5 * 1024 * 1024,
+
+        runtimeCaching: [
+          {
+            urlPattern: /^https:\/\/fonts\.googleapis\.com/,
+            handler: 'CacheFirst',
+            options: {
+              cacheName: 'google-fonts-stylesheets'
+            }
+          },
+          {
+            urlPattern: /^https:\/\/fonts\.gstatic\.com/,
+            handler: 'CacheFirst',
+            options: {
+              cacheName: 'google-fonts-webfonts'
+            }
+          },
+          {
+            urlPattern: ({ request }) => request.destination === 'image',
+            handler: 'CacheFirst',
+            options: {
+              cacheName: 'images-cache',
+              expiration: {
+                maxEntries: 50,
+                maxAgeSeconds: 60 * 60 * 24 * 30 // 30 días
+              }
+            }
+          }
+        ]
+      },
+
       includeAssets: [
         'icons/icon-192x192.png',
         'icons/icon-512x512.png',
         'icons/maskable-512x512.png',
         'icons/apple-touch-icon.png'
       ],
+
       manifest: {
         name: 'The Last Farm',
         short_name: 'The Last Farm',
@@ -51,42 +91,10 @@ export default defineConfig({
             form_factor: 'narrow'
           }
         ]
-      },
-      workbox: {
-        globPatterns: ['**/*.{js,css,html,png,svg,ico,webmanifest}'],
-        cleanupOutdatedCaches: true,
-        maximumFileSizeToCacheInBytes: 5 * 1024 * 1024, // 5 MB
-        runtimeCaching: [
-          {
-            urlPattern: /^https:\/\/fonts\.googleapis\.com/,
-            handler: 'CacheFirst',
-            options: {
-              cacheName: 'google-fonts-stylesheets'
-            }
-          },
-          {
-            urlPattern: /^https:\/\/fonts\.gstatic\.com/,
-            handler: 'CacheFirst',
-            options: {
-              cacheName: 'google-fonts-webfonts'
-            }
-          },
-          {
-            urlPattern: ({ request }) =>
-              request.destination === 'image',
-            handler: 'CacheFirst',
-            options: {
-              cacheName: 'images-cache',
-              expiration: {
-                maxEntries: 50,
-                maxAgeSeconds: 60 * 60 * 24 * 30 // 30 días
-              }
-            }
-          }
-        ]
       }
     })
   ],
+
   css: {
     postcss: {
       plugins: [tailwindcss()]
