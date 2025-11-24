@@ -108,12 +108,15 @@
       <div
         class="flex flex-col md:flex-row justify-center items-center gap-4 md:gap-8"
       >
-        <button
+        <a
+          href="https://www.mediafire.com/file/4ghzzd7keyxldji/app-release.apk/file"
+          target="_blank"
+          rel="noopener noreferrer"
           class="bg-gray-800 hover:bg-gray-700 px-6 py-3 rounded-lg transition-colors flex items-center justify-center space-x-2 w-full md:w-auto"
         >
           <DevicePhoneMobileIcon class="w-5 h-5" />
           <span>Descargar desde MediaFire</span>
-        </button>
+        </a>
       </div>
     </div>
   </section>
