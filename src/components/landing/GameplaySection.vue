@@ -33,12 +33,6 @@
               />
               Gráficos pixel art encantadores
             </li>
-            <li class="flex items-center text-farm-brown-700">
-              <CheckCircleIcon
-                class="w-5 h-5 text-farm-green-500 mr-3 flex-shrink-0"
-              />
-              Sistema de clima dinámico
-            </li>
           </ul>
         </div>
 

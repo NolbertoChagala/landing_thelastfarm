@@ -16,19 +16,7 @@
           </p>
           <div class="flex space-x-4">
             <a
-              href="#"
-              class="w-10 h-10 bg-farm-brown-700 rounded-full flex items-center justify-center hover:bg-farm-white-600 transition-colors"
-            >
-              <ShareIcon class="w-5 h-5" />
-            </a>
-            <a
-              href="#"
-              class="w-10 h-10 bg-farm-brown-700 rounded-full flex items-center justify-center hover:bg-farm-green-600 transition-colors"
-            >
-              <ChatBubbleLeftRightIcon class="w-5 h-5" />
-            </a>
-            <a
-              href="#"
+              href="/#gallery"
               class="w-10 h-10 bg-farm-brown-700 rounded-full flex items-center justify-center hover:bg-farm-green-600 transition-colors"
             >
               <PhotoIcon class="w-5 h-5" />
@@ -43,22 +31,24 @@
           </h4>
           <ul class="space-y-2 text-sm sm:text-base">
             <li>
-              <a href="#" class="hover:text-white transition-colors"
+              <a href="/#features" class="hover:text-white transition-colors"
+                >Caracteristicas</a
+              >
+            </li>
+            <li>
+              <a href="/#gameplay" class="hover:text-white transition-colors"
+                >Juego</a
+              >
+            </li>
+            <li>
+              <a href="/#gallery" class="hover:text-white transition-colors"
+                >Galeria</a
+              >
+            </li>
+            <li>
+              <a href="/#download" class="hover:text-white transition-colors"
                 >Descargar</a
               >
-            </li>
-            <li>
-              <a href="#" class="hover:text-white transition-colors"
-                >Características</a
-              >
-            </li>
-            <li>
-              <a href="#" class="hover:text-white transition-colors"
-                >Actualizaciones</a
-              >
-            </li>
-            <li>
-              <a href="#" class="hover:text-white transition-colors">Roadmap</a>
             </li>
           </ul>
         </div>

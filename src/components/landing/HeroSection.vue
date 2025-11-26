@@ -31,7 +31,7 @@
                 class="btn-farm-primary flex items-center justify-center space-x-2 w-full sm:w-auto py-3"
               >
                 <component :is="link.icon" class="w-5 h-5" />
-                <span class="text-base sm:text-lg">Jugar Ahora</span>
+                <span class="text-base sm:text-lg">Instalar ahora</span>
               </a>
             </li>
           </div>
@@ -39,25 +39,6 @@
           <div
             class="flex items-center justify-between sm:justify-start sm:space-x-10 text-farm-brown-600 mt-6"
           >
-            <div class="text-center">
-              <div
-                class="text-xl sm:text-2xl font-bold text-farm-green-600 flex items-center justify-center space-x-1"
-              >
-                <StarIcon class="w-5 sm:w-6 h-5 sm:h-6 fill-current" />
-                <span>4.8</span>
-              </div>
-              <div class="text-xs sm:text-sm">Calificación</div>
-            </div>
-
-            <div class="text-center">
-              <div
-                class="text-xl sm:text-2xl font-bold text-farm-green-600 flex items-center justify-center space-x-1"
-              >
-                <GiftIcon class="w-5 sm:w-6 h-5 sm:h-6" />
-                <span>100+</span>
-              </div>
-              <div class="text-xs sm:text-sm">Cultivos</div>
-            </div>
           </div>
         </div>
 

@@ -50,19 +50,23 @@
 
         <!-- Progreso del jugador -->
         <div
-          class="bg-red-50 rounded-2xl p-8 text-center shadow-lg hover:shadow-xl transition-shadow"
+          class="bg-blue-50 rounded-2xl p-8 text-center shadow-lg hover:shadow-xl transition-shadow"
         >
           <div
-            class="w-16 h-16 bg-red-200 rounded-full flex items-center justify-center mx-auto mb-4"
+            class="w-16 h-16 bg-blue-200 rounded-full flex items-center justify-center mx-auto mb-4"
           >
-            <TrophyIcon class="w-8 h-8 text-red-700" />
+            <TrophyIcon class="w-8 h-8 text-blue-700" />
           </div>
+
           <h3 class="text-2xl font-semibold text-farm-brown-800 mb-4">
-            Progreso y Logros
+            Actualizaciones y Futuras Versiones
           </h3>
+
           <p class="text-farm-brown-600">
-            Desbloquea logros basados en tu desempeño. Administra tus 5 vidas y
-            demuestra qué tan lejos puedes llegar.
+            Mantente al día con las mejoras del juego: nuevas funciones,
+            correcciones, contenido adicional y avances en el desarrollo de
+            futuras versiones de
+            <strong>The Last Farm</strong>.
           </p>
         </div>
       </div>
