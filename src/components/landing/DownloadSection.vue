@@ -65,7 +65,7 @@
 
           <!-- Botón descarga -->
           <a
-            href="https://www.mediafire.com/file/6l39ezkzmikdlmz/app-release.apk/file"
+            href="https://www.mediafire.com/file/iy2tzs84ggq9da9/app-release.apk/file"
             target="_blank"
             rel="noopener noreferrer"
             class="bg-farm-green-600 hover:bg-farm-green-500 px-10 py-4 rounded-full transition-all flex items-center justify-center space-x-3 text-lg font-semibold shadow-lg"
