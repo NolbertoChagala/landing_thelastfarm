@@ -10,6 +10,7 @@
       </p>
 
       <div class="grid md:grid-cols-3 gap-8 mb-12">
+        <!-- Plan Gratis -->
         <div class="bg-farm-brown-700 rounded-xl p-6">
           <h3 class="text-2xl font-semibold mb-4">Gratis</h3>
           <div class="text-4xl font-bold mb-4">$0 MXN</div>
@@ -36,6 +37,7 @@
           <button class="w-full btn-farm-primary">Descargar Ahora</button>
         </div>
 
+        <!-- Plan Premium -->
         <div
           class="bg-farm-green-600 rounded-xl p-6 transform scale-100 md:scale-105 shadow-xl md:shadow-none z-10"
         >
@@ -65,6 +67,7 @@
               <span>Membresía Premium con beneficios</span>
             </li>
           </ul>
+
           <button
             class="w-full bg-white text-farm-green-600 px-8 py-3 rounded-full font-semibold hover:bg-farm-green-50 transition-colors"
           >
@@ -72,6 +75,7 @@
           </button>
         </div>
 
+        <!-- Plan Supporter -->
         <div class="bg-farm-brown-700 rounded-xl p-6">
           <h3 class="text-2xl font-semibold mb-4">Supporter</h3>
           <div class="text-4xl font-bold mb-4">$199 MXN</div>
@@ -105,18 +109,32 @@
         </div>
       </div>
 
+      <!-- Botón de descarga -->
       <div
         class="flex flex-col md:flex-row justify-center items-center gap-4 md:gap-8"
       >
         <a
-          href="https://www.mediafire.com/file/6l39ezkzmikdlmz/app-release.apk/file" 
+          href="https://www.mediafire.com/file/6l39ezkzmikdlmz/app-release.apk/file"
           target="_blank"
           rel="noopener noreferrer"
           class="bg-gray-800 hover:bg-gray-700 px-6 py-3 rounded-lg transition-colors flex items-center justify-center space-x-2 w-full md:w-auto"
         >
           <DevicePhoneMobileIcon class="w-5 h-5" />
-          <span>Descargar desde MediaFire</span>
+          <span>Descargar desde MediaFire para celular</span>
         </a>
+      </div>
+
+      
+      <div class="mt-10 flex flex-col items-center">
+        <p class="text-lg mb-4 text-farm-brown-200">
+          Escanea el código QR para descargar en computadora
+        </p>
+
+        <img
+          src="https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=https://www.mediafire.com/file/6l39ezkzmikdlmz/app-release.apk/file"
+          alt="QR de descarga"
+          class="w-44 h-44 rounded-lg shadow-lg bg-white p-2"
+        />
       </div>
     </div>
   </section>
@@ -127,7 +145,5 @@ import {
   CheckCircleIcon,
   StarIcon,
   DevicePhoneMobileIcon,
-  ComputerDesktopIcon,
-  ArrowDownTrayIcon,
 } from "@heroicons/vue/24/outline";
 </script>
