@@ -39,22 +39,24 @@
       </div>
     </div>
 
-    <div
-      v-show="isMenuOpen"
-      class="md:hidden absolute top-full left-0 w-full bg-black/95 backdrop-blur-md border-b border-farm-green-500/30 shadow-xl"
-    >
-      <ul class="flex flex-col py-4 px-6 space-y-3">
-        <li v-for="link in links" :key="link.href">
-          <a
-            :href="link.href"
-            @click="isMenuOpen = false"
-            class="text-gray-300 hover:text-farm-green-400 transition-colors flex items-center space-x-3 py-3 font-semibold uppercase text-sm tracking-wide"
-          >
-            <component :is="link.icon" class="w-5 h-5" />
-            <span>{{ link.text }}</span>
-          </a>
-        </li>
-      </ul>
+    <div v-show="isMenuOpen" class="md:hidden fixed inset-0 z-40">
+      <div class="absolute inset-0 bg-black/80 backdrop-blur-sm" @click="isMenuOpen = false"></div>
+      <div class="relative z-50 pt-20 px-6">
+        <div class="bg-slate-900/90 rounded-t-xl shadow-2xl border border-farm-green-500/20 py-6">
+          <ul class="flex flex-col items-center space-y-4">
+            <li v-for="link in links" :key="link.href" class="w-full max-w-xs">
+              <a
+                :href="link.href"
+                @click="isMenuOpen = false"
+                class="block w-full text-center text-gray-300 hover:text-farm-green-400 transition-colors py-3 font-semibold uppercase text-sm tracking-wide rounded-md"
+              >
+                <component :is="link.icon" class="w-5 h-5 inline-block mr-2 -translate-y-0.5" />
+                <span>{{ link.text }}</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
   </nav>
 </template>

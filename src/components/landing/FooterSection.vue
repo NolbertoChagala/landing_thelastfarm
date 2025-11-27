@@ -17,8 +17,8 @@
             <h3 class="text-xl font-black text-white">The Last Farm</h3>
           </div>
           <p class="mb-6 text-sm leading-relaxed">
-            Un juego de supervivencia en pixel art donde cada día es una batalla. 
-            Cultiva, construye y lucha contra las hordas infinitas.
+            Un juego de supervivencia en pixel art donde cada día es una batalla.
+            Cultiva, construye y defiende tu hogar contra hordas implacables.
           </p>
           <div class="flex space-x-4">
             <a
@@ -42,11 +42,7 @@
                 >Mecánica</a
               >
             </li>
-            <li>
-              <a href="/#features" class="hover:text-farm-green-400 transition-colors"
-                >Características</a
-              >
-            </li>
+            <!-- características removed: section no longer exists -->
             <li>
               <a href="/#gameplay" class="hover:text-farm-green-400 transition-colors"
                 >Gameplay</a

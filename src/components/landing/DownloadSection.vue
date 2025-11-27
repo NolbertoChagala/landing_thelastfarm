@@ -9,12 +9,11 @@
       <div class="absolute bottom-1/4 left-0 w-96 h-96 bg-farm-green-500/10 rounded-full blur-3xl"></div>
     </div>
 
-    <div class="container-custom text-center px-6 sm:px-0 relative z-10">
+    <div class="container-custom text-center px-6 sm:px-0 relative z-10 pb-24 md:pb-20">
 
       <!-- Título principal -->
       <h2 class="text-5xl sm:text-6xl font-black text-white mb-6">
         Descarga la App
-        <span class="text-farm-green-400">Complementaria</span>
       </h2>
 
       <p class="text-lg sm:text-xl mb-12 text-gray-400 max-w-2xl mx-auto leading-relaxed">
@@ -66,17 +65,17 @@
         </div>
 
         <!-- QR + Descarga -->
-        <div class="flex flex-col items-center space-y-8">
+        <div class="flex flex-col items-center space-y-6">
           
           <div class="flex flex-col items-center">
             <p class="text-lg mb-4 text-gray-300 font-semibold">
               Escanea el código QR:
             </p>
-            <div class="bg-white p-4 rounded-xl shadow-2xl shadow-farm-green-500/50 border border-farm-green-500/50">
+            <div class="bg-white p-3 rounded-xl shadow-2xl shadow-farm-green-500/50 border border-farm-green-500/50">
               <img
                 src="https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=https://www.mediafire.com/file/iy2tzs84ggq9da9/app-release.apk/file"
                 alt="QR de descarga"
-                class="w-48 h-48"
+                class="w-40 h-40 sm:w-48 sm:h-48"
               />
             </div>
           </div>
@@ -89,7 +88,7 @@
             class="group relative inline-block"
           >
             <div class="absolute inset-0 bg-gradient-to-r from-farm-green-500 via-farm-green-600 to-farm-green-500 rounded-full blur-lg opacity-75 group-hover:opacity-100 transition duration-300 shadow-2xl"></div>
-            <div class="relative bg-gradient-to-r from-farm-green-500 to-farm-green-600 hover:from-farm-green-400 hover:to-farm-green-500 px-12 py-5 rounded-full transition-all transform group-hover:scale-110 flex items-center justify-center space-x-3 text-xl font-black text-black shadow-2xl">
+            <div class="relative bg-gradient-to-r from-farm-green-500 to-farm-green-600 hover:from-farm-green-400 hover:to-farm-green-500 px-8 sm:px-12 py-3 sm:py-5 rounded-full transition-all transform group-hover:scale-110 flex items-center justify-center space-x-3 text-lg sm:text-xl font-black text-black shadow-2xl">
               <DevicePhoneMobileIcon class="w-7 h-7" />
               <span>DESCARGAR APP</span>
             </div>

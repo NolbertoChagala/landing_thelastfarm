@@ -1,5 +1,5 @@
 <template>
-  <section id="intro" class="relative min-h-screen pt-24 flex items-center justify-center overflow-hidden bg-black">
+  <section id="intro" class="relative min-h-screen pt-20 md:pt-24 flex items-center justify-center overflow-hidden bg-black">
     <!-- Video/Imagen de fondo épico -->
     <div class="absolute inset-0 z-0">
       <div class="absolute inset-0 bg-gradient-to-b from-purple-900/80 via-slate-900/80 to-black/90 z-10"></div>
@@ -9,9 +9,9 @@
 
     <div class="container-custom px-6 sm:px-0 mx-auto relative z-20 text-center">
       <!-- Logo/Título con efecto glitch -->
-      <div class="mb-16 animate-fade-in">
+      <div class="mb-12 sm:mb-16 animate-fade-in">
         <div class="inline-block mb-6">
-          <img src="/The_Last_Farm.webp" alt="The Last Farm" class="w-24 h-24 sm:w-32 sm:h-32 drop-shadow-2xl" />
+          <img src="/The_Last_Farm.webp" alt="The Last Farm" class="w-20 h-20 sm:w-32 sm:h-32 drop-shadow-2xl" />
         </div>
         <h1 class="text-5xl sm:text-6xl md:text-7xl font-black text-white mb-6 leading-tight">
           THE LAST
@@ -43,7 +43,7 @@
         </p>
 
         <!-- Estadísticas/Badges -->
-        <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-12 mb-12">
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-8 sm:mt-12 mb-8 sm:mb-12">
           <div class="bg-slate-800/50 backdrop-blur-md border border-farm-green-500/30 rounded-lg p-4 hover:border-farm-green-400/70 transition">
             <div class="text-2xl font-black text-farm-green-400">∞</div>
             <p class="text-xs text-gray-400 mt-2">OLEADAS INFINITAS</p>
@@ -67,7 +67,7 @@
       <div class="animate-fade-in-delayed-2 space-y-6">
         <a
           href="#story"
-          class="inline-block px-10 py-4 bg-gradient-to-r from-farm-green-500 to-farm-green-600 hover:from-farm-green-400 hover:to-farm-green-500 text-black font-black text-lg rounded-lg shadow-2xl shadow-farm-green-500/50 transition transform hover:scale-105 hover:shadow-farm-green-400/70"
+          class="inline-block px-10 py-4 bg-gradient-to-r from-farm-green-500 to-farm-green-600 hover:from-farm-green-400 hover:to-farm-green-500 text-black font-black text-base sm:text-lg rounded-lg shadow-2xl shadow-farm-green-500/50 transition transform hover:scale-105 hover:shadow-farm-green-400/70"
         >
           ▶ DESCUBRE TU HISTORIA
         </a>
