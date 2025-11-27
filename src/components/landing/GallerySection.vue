@@ -1,17 +1,19 @@
 <template>
-  <section id="gallery" class="section-padding bg-white">
+  <section id="gallery" class="section-padding bg-gradient-to-b from-slate-900 to-slate-800">
     <div class="container-custom">
       <div class="text-center mb-16">
-        <h2 class="text-4xl font-bold text-farm-brown-800 mb-4">
-          Capturas del Juego
+        <span class="text-farm-green-400 text-sm font-bold uppercase tracking-widest">Capítulo 5: La Galería</span>
+        <h2 class="text-5xl sm:text-6xl font-black text-white mt-4 mb-4">
+          El Mundo de
+          <span class="text-farm-green-400">The Last Farm</span>
         </h2>
-        <p class="text-xl text-farm-brown-600">
-          Explora el hermoso mundo pixel art de The Last Farm
+        <p class="text-xl text-gray-400">
+          Déjate asombrar por el pixel art más encantador del apocalipsis
         </p>
       </div>
 
-      <div class="relative max-w-4xl mx-auto">
-        <div class="overflow-hidden rounded-2xl shadow-2xl">
+      <div class="relative max-w-5xl mx-auto">
+        <div class="overflow-hidden rounded-2xl shadow-2xl border border-farm-green-500/30">
           <div
             class="flex transition-transform duration-500 ease-in-out"
             :style="{ transform: `translateX(-${currentSlide * 100}%)` }"
@@ -32,14 +34,14 @@
 
         <button
           @click="previousSlide"
-          class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/90 hover:bg-white text-farm-brown-800 rounded-full p-3 shadow-lg transition-all duration-300 hover:scale-110"
+          class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/40 backdrop-blur-md text-white rounded-full p-3 shadow-lg transition-all duration-300 hover:scale-110 border border-white/30"
         >
           <ChevronLeftIcon class="w-6 h-6" />
         </button>
 
         <button
           @click="nextSlide"
-          class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/90 hover:bg-white text-farm-brown-800 rounded-full p-3 shadow-lg transition-all duration-300 hover:scale-110"
+          class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/40 backdrop-blur-md text-white rounded-full p-3 shadow-lg transition-all duration-300 hover:scale-110 border border-white/30"
         >
           <ChevronRightIcon class="w-6 h-6" />
         </button>
@@ -49,20 +51,20 @@
             v-for="(image, index) in gameImages"
             :key="index"
             @click="goToSlide(index)"
-            class="w-3 h-3 rounded-full transition-all duration-300"
+            class="w-3 h-3 rounded-full transition-all duration-300 border border-white/30"
             :class="
               currentSlide === index
-                ? 'bg-farm-green-600'
-                : 'bg-farm-brown-300 hover:bg-farm-brown-400'
+                ? 'bg-farm-green-500 w-8'
+                : 'bg-gray-600 hover:bg-gray-500'
             "
           ></button>
         </div>
 
-        <div class="text-center mt-6">
-          <h3 class="text-2xl font-semibold text-farm-brown-800 mb-2">
+        <div class="text-center mt-8">
+          <h3 class="text-2xl font-black text-white mb-3">
             {{ gameImages[currentSlide].title }}
           </h3>
-          <p class="text-farm-brown-600">
+          <p class="text-gray-400 leading-relaxed max-w-2xl mx-auto">
             {{ gameImages[currentSlide].description }}
           </p>
         </div>
@@ -84,21 +86,21 @@ const gameImages = ref([
     alt: "The Last Farm - Vista general de la granja",
     title: "Tu Último Refugio",
     description:
-      "Tu hogar ya está listo: una pequeña granja donde todo comienza. Mantén tu refugio seguro mientras preparas tu espada para sobrevivir.",
+      "Tu hogar ya está listo: una pequeña granja donde todo comienza. Mantén tu refugio seguro mientras preparas tu espada para sobrevivir. Es todo lo que tienes en este mundo nuevo y hostil.",
   },
   {
     src: "/NocheJuego.webp",
     alt: "The Last Farm - Gameplay nocturno",
-    title: "Día de Trabajo, Noche de Supervivencia",
+    title: "La Oscuridad Cae",
     description:
-      "Durante el día, cultiva y organiza tu granja; pero cuando entres al modo de noche, prepárate: las hordas de zombis salen a buscarte.",
+      "Cuando el sol desaparece en el horizonte, comienza el verdadero terror. Las hordas de zombies salen de sus guaridas y el cielo se tiñe de un púrpura amenazante. ¿Podrás sobrevivir otra noche?",
   },
   {
     src: "/CasaDia.webp",
     alt: "The Last Farm - Casa y cultivo de zanahorias",
-    title: "Un Hogar que Acompaña tu Aventura",
+    title: "La Paz del Día",
     description:
-      "La casa que ves es parte del paisaje, un fondo que define el ambiente tranquilo de tu granja. Tu verdadera labor está afuera: cuidar y cosechar tus zanahorias para avanzar cada día.",
+      "Durante el día, puedes trabajar en paz. Cultiva tus zanahorias, construye defensas y prepárate para cuando vuelva la oscuridad. Este es tu momento para hacerte más fuerte.",
   },
 ]);
 

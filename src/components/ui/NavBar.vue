@@ -1,10 +1,10 @@
 <template>
-  <nav class="fixed top-0 w-full bg-white/90 backdrop-blur-md z-50 shadow-sm">
+  <nav class="fixed top-0 w-full bg-black/80 backdrop-blur-md z-50 shadow-lg border-b border-farm-green-500/30">
     <div class="container-custom px-6 sm:px-0 mx-auto">
       <div class="flex justify-between items-center py-4">
-        <div class="flex items-center space-x-2">
+        <div class="flex items-center space-x-3">
           <div
-            class="w-8 h-8 bg-farm-white-200 rounded-lg flex items-center justify-center overflow-hidden"
+            class="w-10 h-10 bg-farm-green-600 rounded-lg flex items-center justify-center overflow-hidden shadow-lg shadow-farm-green-500/50"
           >
             <img
               src="/The_Last_Farm.webp"
@@ -12,16 +12,17 @@
               class="w-full h-full object-cover"
             />
           </div>
-          <h2 class="text-xl sm:text-2xl font-bold text-farm-green-800">
-            The Las Farm
+          <h2 class="text-xl sm:text-2xl font-black text-white">
+            THE LAST
+            <span class="text-farm-green-400">FARM</span>
           </h2>
         </div>
 
-        <ul class="hidden md:flex space-x-8">
+        <ul class="hidden md:flex space-x-6">
           <li v-for="link in links" :key="link.href">
             <a
               :href="link.href"
-              class="text-farm-brown-700 hover:text-farm-green-600 transition-colors flex items-center space-x-1"
+              class="text-gray-300 hover:text-farm-green-400 transition-colors flex items-center space-x-2 font-semibold uppercase text-sm tracking-wide"
             >
               <component :is="link.icon" class="w-4 h-4" />
               <span>{{ link.text }}</span>
@@ -31,7 +32,7 @@
 
         <button
           @click="toggleMenu"
-          class="md:hidden text-farm-brown-700 focus:outline-none"
+          class="md:hidden text-gray-300 hover:text-farm-green-400 focus:outline-none transition"
         >
           <component :is="isMenuOpen ? XMarkIcon : Bars3Icon" class="w-6 h-6" />
         </button>
@@ -40,17 +41,17 @@
 
     <div
       v-show="isMenuOpen"
-      class="md:hidden absolute top-full left-0 w-full bg-white border-t border-gray-100 shadow-lg"
+      class="md:hidden absolute top-full left-0 w-full bg-black/95 backdrop-blur-md border-b border-farm-green-500/30 shadow-xl"
     >
-      <ul class="flex flex-col py-4 px-6 space-y-4">
+      <ul class="flex flex-col py-4 px-6 space-y-3">
         <li v-for="link in links" :key="link.href">
           <a
             :href="link.href"
             @click="isMenuOpen = false"
-            class="text-farm-brown-700 hover:text-farm-green-600 transition-colors flex items-center space-x-3 py-2"
+            class="text-gray-300 hover:text-farm-green-400 transition-colors flex items-center space-x-3 py-3 font-semibold uppercase text-sm tracking-wide"
           >
             <component :is="link.icon" class="w-5 h-5" />
-            <span class="text-lg">{{ link.text }}</span>
+            <span>{{ link.text }}</span>
           </a>
         </li>
       </ul>
@@ -67,10 +68,9 @@ import {
   PhotoIcon,
   ArrowDownTrayIcon,
   Bars3Icon,
-  XMarkIcon, // Importé XMarkIcon para cuando el menú está abierto
+  XMarkIcon,
 } from "@heroicons/vue/24/outline";
 
-// Estado para controlar si el menú móvil está abierto
 const isMenuOpen = ref(false);
 
 const toggleMenu = () => {
@@ -78,8 +78,9 @@ const toggleMenu = () => {
 };
 
 const links = [
-  { href: "#home", text: "Inicio", icon: HomeIcon },
-  { href: "#features", text: "Características", icon: SparklesIcon },
+  { href: "#intro", text: "Intro", icon: PlayIcon },
+  { href: "#story", text: "Historia", icon: HomeIcon },
+  { href: "#mechanics", text: "Mecánica", icon: PlayIcon },
   { href: "#gameplay", text: "Gameplay", icon: PlayIcon },
   { href: "#gallery", text: "Galería", icon: PhotoIcon },
   { href: "#download", text: "Descargar", icon: ArrowDownTrayIcon },

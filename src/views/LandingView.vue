@@ -1,8 +1,9 @@
 <template>
   <div class="landing-page">
     <NavBar />
+    <IntroSection />
     <HeroSection />
-    <FeaturesSection />
+    <GameMechanicsSection />
     <GameplaySection />
     <GallerySection />
     <DownloadSection />
@@ -12,8 +13,9 @@
 
 <script setup lang="ts">
 import NavBar from "../components/ui/NavBar.vue";
+import IntroSection from "../components/landing/IntroSection.vue";
 import HeroSection from "../components/landing/HeroSection.vue";
-import FeaturesSection from "../components/landing/FeaturesSection.vue";
+import GameMechanicsSection from "../components/landing/GameMechanicsSection.vue";
 import GameplaySection from "../components/landing/GameplaySection.vue";
 import GallerySection from "../components/landing/GallerySection.vue";
 import DownloadSection from "../components/landing/DownloadSection.vue";

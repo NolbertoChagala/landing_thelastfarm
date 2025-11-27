@@ -1,51 +1,67 @@
 <template>
   <section
     id="download"
-    class="section-padding bg-farm-brown-800 text-white py-20"
+    class="section-padding bg-gradient-to-b from-black via-slate-900 to-slate-800 py-20 relative overflow-hidden"
   >
-    <div class="container-custom text-center px-6 sm:px-0">
+    <!-- Efectos de fondo -->
+    <div class="absolute inset-0 z-0">
+      <div class="absolute top-1/4 right-0 w-96 h-96 bg-farm-green-500/20 rounded-full blur-3xl"></div>
+      <div class="absolute bottom-1/4 left-0 w-96 h-96 bg-farm-green-500/10 rounded-full blur-3xl"></div>
+    </div>
+
+    <div class="container-custom text-center px-6 sm:px-0 relative z-10">
 
       <!-- Título principal -->
-      <h2 class="text-3xl sm:text-4xl font-bold mb-6">
-        Mantente Informado con <span class="text-farm-yellow-400">The Last Farm</span>
+      <h2 class="text-5xl sm:text-6xl font-black text-white mb-6">
+        Descarga la App
+        <span class="text-farm-green-400">Complementaria</span>
       </h2>
 
-      <p class="text-lg sm:text-xl mb-16 text-farm-brown-200 max-w-2xl mx-auto">
-        La aplicación complementaria te permite acceder a información útil del juego, 
-        conocer novedades importantes, actualizaciones y contenido adicional 
-        relacionado con el universo de <strong>The Last Farm</strong>.
+      <p class="text-lg sm:text-xl mb-12 text-gray-400 max-w-2xl mx-auto leading-relaxed">
+        Mientras jugas The Last Farm, usa nuestra app complementaria para acceder a información vital del juego, 
+        <span class="text-farm-green-400 font-semibold">estrategias de supervivencia, noticias y actualizaciones.</span>
       </p>
 
       <!-- Contenido principal -->
       <div
         class="grid md:grid-cols-2 gap-16 items-center justify-center max-w-5xl mx-auto"
       >
-        <!-- Beneficios informativos -->
+        <!-- Beneficios -->
         <div class="space-y-8 text-left">
-          <h3 class="text-2xl font-bold text-farm-yellow-300">
-            ¿Qué encontrarás en la app?
+          <h3 class="text-2xl font-black text-farm-green-400">
+            Lo que obtendrás:
           </h3>
 
           <ul class="space-y-6">
-
-            <li class="flex items-start gap-3">
-              <CheckCircleIcon
-                class="w-6 h-6 text-farm-green-400 flex-shrink-0 mt-1"
-              />
-              <span class="text-lg leading-relaxed">
-                Datos acerca de <strong>personajes, criaturas</strong> y elementos del juego.
-              </span>
+            <li class="flex items-start gap-4 p-4 bg-slate-800/50 border border-farm-green-500/30 rounded-lg hover:border-farm-green-400/70 transition">
+              <div class="w-8 h-8 rounded-full bg-gradient-to-r from-farm-green-500 to-farm-green-600 flex items-center justify-center flex-shrink-0 shadow-lg shadow-farm-green-500/50">
+                <span class="text-white font-black text-sm">✓</span>
+              </div>
+              <div>
+                <h4 class="font-bold text-white">Enciclopedia del Juego</h4>
+                <p class="text-sm text-gray-400 mt-1">Información completa sobre zombies, cultivos, armas y estrategias</p>
+              </div>
             </li>
 
-            <li class="flex items-start gap-3">
-              <CheckCircleIcon
-                class="w-6 h-6 text-farm-green-400 flex-shrink-0 mt-1"
-              />
-              <span class="text-lg leading-relaxed">
-                Novedades, noticias y <strong>actualizaciones del desarrollo</strong>.
-              </span>
+            <li class="flex items-start gap-4 p-4 bg-slate-800/50 border border-farm-green-500/30 rounded-lg hover:border-farm-green-400/70 transition">
+              <div class="w-8 h-8 rounded-full bg-gradient-to-r from-farm-green-500 to-farm-green-600 flex items-center justify-center flex-shrink-0 shadow-lg shadow-farm-green-500/50">
+                <span class="text-white font-black text-sm">✓</span>
+              </div>
+              <div>
+                <h4 class="font-bold text-white">Noticias y Actualizaciones</h4>
+                <p class="text-sm text-gray-400 mt-1">Mantente informado de nuevas features, parches y contenido</p>
+              </div>
             </li>
 
+            <li class="flex items-start gap-4 p-4 bg-slate-800/50 border border-farm-green-500/30 rounded-lg hover:border-farm-green-400/70 transition">
+              <div class="w-8 h-8 rounded-full bg-gradient-to-r from-farm-green-500 to-farm-green-600 flex items-center justify-center flex-shrink-0 shadow-lg shadow-farm-green-500/50">
+                <span class="text-white font-black text-sm">✓</span>
+              </div>
+              <div>
+                <h4 class="font-bold text-white">Guías de Supervivencia</h4>
+                <p class="text-sm text-gray-400 mt-1">Consejos, estrategias y tutoriales para maximizar tus noches</p>
+              </div>
+            </li>
           </ul>
         </div>
 
@@ -53,31 +69,61 @@
         <div class="flex flex-col items-center space-y-8">
           
           <div class="flex flex-col items-center">
-            <p class="text-lg mb-3 text-farm-brown-200">
-              Escanea desde tu móvil para descargar:
+            <p class="text-lg mb-4 text-gray-300 font-semibold">
+              Escanea el código QR:
             </p>
-            <img
-              src="https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=https://www.mediafire.com/file/6l39ezkzmikdlmz/app-release.apk/file"
-              alt="QR de descarga"
-              class="w-48 h-48 rounded-lg shadow-lg bg-white p-2"
-            />
+            <div class="bg-white p-4 rounded-xl shadow-2xl shadow-farm-green-500/50 border border-farm-green-500/50">
+              <img
+                src="https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=https://www.mediafire.com/file/iy2tzs84ggq9da9/app-release.apk/file"
+                alt="QR de descarga"
+                class="w-48 h-48"
+              />
+            </div>
           </div>
 
-          <!-- Botón descarga -->
+          <!-- Botón descarga - ÉPICO -->
           <a
             href="https://www.mediafire.com/file/iy2tzs84ggq9da9/app-release.apk/file"
             target="_blank"
             rel="noopener noreferrer"
-            class="bg-farm-green-600 hover:bg-farm-green-500 px-10 py-4 rounded-full transition-all flex items-center justify-center space-x-3 text-lg font-semibold shadow-lg"
+            class="group relative inline-block"
           >
-            <DevicePhoneMobileIcon class="w-6 h-6" />
-            <span>Descargar para Android</span>
+            <div class="absolute inset-0 bg-gradient-to-r from-farm-green-500 via-farm-green-600 to-farm-green-500 rounded-full blur-lg opacity-75 group-hover:opacity-100 transition duration-300 shadow-2xl"></div>
+            <div class="relative bg-gradient-to-r from-farm-green-500 to-farm-green-600 hover:from-farm-green-400 hover:to-farm-green-500 px-12 py-5 rounded-full transition-all transform group-hover:scale-110 flex items-center justify-center space-x-3 text-xl font-black text-black shadow-2xl">
+              <DevicePhoneMobileIcon class="w-7 h-7" />
+              <span>DESCARGAR APP</span>
+            </div>
           </a>
 
-          <p class="text-sm text-farm-brown-300">
-            Versión 1.0 · 45 MB · APK verificada
+          <p class="text-sm text-gray-500 text-center">
+            App Complementaria · 45 MB · Android 8.0+
+            <br />
+            <span class="text-farm-green-400 font-semibold">Descarga gratuita</span>
           </p>
 
+        </div>
+      </div>
+
+      <!-- Stats finales -->
+      <div class="mt-20 pt-20 border-t border-slate-700">
+        <h3 class="text-2xl font-black text-white mb-12">La App te Proporciona</h3>
+        <div class="grid md:grid-cols-4 gap-6 max-w-3xl mx-auto">
+          <div class="bg-slate-800/50 border border-farm-green-500/30 rounded-lg p-6 text-center hover:border-farm-green-400/70 transition">
+            <div class="text-4xl font-black text-farm-green-400 mb-2">📚</div>
+            <p class="text-gray-400 font-semibold">Enciclopedia</p>
+          </div>
+          <div class="bg-slate-800/50 border border-farm-green-500/30 rounded-lg p-6 text-center hover:border-farm-green-400/70 transition">
+            <div class="text-4xl font-black text-farm-green-400 mb-2">📰</div>
+            <p class="text-gray-400 font-semibold">Noticias</p>
+          </div>
+          <div class="bg-slate-800/50 border border-farm-green-500/30 rounded-lg p-6 text-center hover:border-farm-green-400/70 transition">
+            <div class="text-4xl font-black text-farm-green-400 mb-2">🎮</div>
+            <p class="text-gray-400 font-semibold">Guías</p>
+          </div>
+          <div class="bg-slate-800/50 border border-farm-green-500/30 rounded-lg p-6 text-center hover:border-farm-green-400/70 transition">
+            <div class="text-4xl font-black text-farm-green-400 mb-2">💡</div>
+            <p class="text-gray-400 font-semibold">Estrategias</p>
+          </div>
         </div>
       </div>
     </div>
