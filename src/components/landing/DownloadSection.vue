@@ -14,6 +14,7 @@
       <!-- Título principal -->
       <h2 class="text-5xl sm:text-6xl font-black text-white mb-6">
         Descarga la App
+        <span class="text-farm-green-400">Complementaria</span>
       </h2>
 
       <p class="text-lg sm:text-xl mb-12 text-gray-400 max-w-2xl mx-auto leading-relaxed">
@@ -125,10 +126,37 @@
           </div>
         </div>
       </div>
+
+      <!-- Instalación PWA -->
+      <div class="mt-20 pt-20 border-t border-slate-700">
+        <h3 class="text-2xl font-black text-white mb-12">Instala la Landing como PWA</h3>
+        <div class="max-w-3xl mx-auto">
+          <div class="bg-slate-800/50 border border-farm-green-500/30 rounded-xl p-8 space-y-6 text-center">
+            <p class="text-lg text-gray-300 leading-relaxed">
+              Instala esta landing en tu dispositivo y accede sin conexión a internet. 
+              <span class="text-farm-green-400 font-semibold">Funciona completamente offline.</span>
+            </p>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              <div class="flex flex-col items-center p-4 bg-slate-700/50 rounded-lg">
+                <div class="text-3xl font-black text-farm-green-400 mb-2">📱</div>
+                <p class="text-sm text-gray-400 font-semibold">Abre en móvil</p>
+              </div>
+              <div class="flex flex-col items-center p-4 bg-slate-700/50 rounded-lg">
+                <div class="text-3xl font-black text-farm-green-400 mb-2">⬇️</div>
+                <p class="text-sm text-gray-400 font-semibold">Presiona instalar</p>
+              </div>
+              <div class="flex flex-col items-center p-4 bg-slate-700/50 rounded-lg">
+                <div class="text-3xl font-black text-farm-green-400 mb-2">✅</div>
+                <p class="text-sm text-gray-400 font-semibold">¡Listo! Offline</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 </template>
 
 <script setup lang="ts">
-import { CheckCircleIcon, DevicePhoneMobileIcon } from "@heroicons/vue/24/outline";
+import { DevicePhoneMobileIcon } from "@heroicons/vue/24/outline";
 </script>
